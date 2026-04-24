@@ -33,9 +33,9 @@ const faqs = [
 ];
 
 const FAQs = () => (
-  <section className="py-16 bg-[#0B243D]">
+  <section className="py-16 bg-brand-mint">
     <div className="container max-w-4xl">
-      <h2 className="font-display text-3xl md:text-4xl  text-white font-bold text-center text-foreground mb-10">
+      <h2 className="font-display text-3xl md:text-4xl  text-navy font-bold text-center text-foreground mb-10">
         FAQs
       </h2>
 

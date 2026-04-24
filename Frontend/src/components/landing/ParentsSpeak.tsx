@@ -2,9 +2,9 @@ import { Play } from "lucide-react";
 import parentsImg from "@/Img/Image_1.jpg";
 
 const ParentsSpeak = () => (
-  <section className="py-16 bg-brand-navy">
+  <section className="py-16 bg-brand-mint">
     <div className="container text-center">
-      <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-8">
+      <h2 className="font-display text-3xl md:text-4xl font-bold text-navy mb-8">
         What Parents Speak About Pramyan?
       </h2>
 

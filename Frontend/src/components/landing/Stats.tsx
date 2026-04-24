@@ -6,7 +6,7 @@ const stats = [
 ];
 
 const Stats = () => (
-  <section className="py-16 bg-brand-mint">
+  <section className="py-16 bg-brand-white">
     <div className="container text-center">
       <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10">
         Numbers That Matter to Parents

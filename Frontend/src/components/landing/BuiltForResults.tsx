@@ -33,9 +33,9 @@ const features = [
 ];
 
 const BuiltForResults = () => (
-  <section className="py-16 bg-brand-navy">
+  <section className="py-16 bg-brand-mint">
     <div className="container">
-      <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-white mb-10">
+      <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-navy mb-10">
         Built for Results, Not Just Classes
       </h2>
 
@@ -65,7 +65,7 @@ type FeatureCardProps = {
 
 const FeatureCard = ({ icon, title, desc, delay }: FeatureCardProps) => (
   <div
-    className="border border-white rounded-md p-5 animate-fade-in-up"
+    className="border border-black rounded-md p-5 animate-fade-in-up"
     style={{ animationDelay: `${delay}ms`, opacity: 0 }}>
     <div className="flex items-center gap-3 mb-2">
       <img
@@ -77,7 +77,7 @@ const FeatureCard = ({ icon, title, desc, delay }: FeatureCardProps) => (
         {title}
       </h3>
     </div>
-    <p className="text-sm text-white leading-relaxed">{desc}</p>
+    <p className="text-sm text-navy leading-relaxed">{desc}</p>
   </div>
 );
 

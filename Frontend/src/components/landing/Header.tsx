@@ -1,7 +1,7 @@
 import logoImg from "@/Img/Logo.png";
 
 const Header = () => (
-  <header className="w-full bg-background py-5 border-b border-border/40">
+  <header className="w-full bg-background py-5 border-b-4 border-[#0C96A0]">
     <div className="container flex items-center justify-center">
       <img
         src={logoImg}
