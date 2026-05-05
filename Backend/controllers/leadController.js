@@ -26,3 +26,18 @@ export const createLead = async (req, res) => {
     res.status(500).json({ message: 'Server error, could not save lead' });
   }
 };
+
+// GET /api/leads - list all leads (newest first)
+export const getLeads = async (req, res) => {
+  try {
+    const leads = await Lead.find().sort({ createdAt: -1 });
+    res.status(200).json({
+      success: true,
+      count: leads.length,
+      data: leads,
+    });
+  } catch (error) {
+    console.error('Error fetching leads:', error);
+    res.status(500).json({ message: 'Server error, could not fetch leads' });
+  }
+};

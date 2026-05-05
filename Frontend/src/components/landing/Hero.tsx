@@ -18,9 +18,11 @@ const initialForm: FormState = {
   sendUpdates: false,
 };
 
-// Change this if your backend runs elsewhere
-const API_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:5001/api/leads";
+/// Backend base URL (e.g. https://your-backend.onrender.com).
+// In production set VITE_API_BASE_URL in Vercel env variables.
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:5001";
+const API_URL = `${API_BASE_URL}/api/leads`;
 
 const Hero = () => {
   const [form, setForm] = useState<FormState>(initialForm);
@@ -60,14 +62,12 @@ const Hero = () => {
 
       navigate("/thank-you");
     } catch (err) {
-      // Even if backend fails, redirect so user isn't blocked.
-      // Comment the navigate line below and uncomment setError to block on failure.
       console.error("Lead submission error:", err);
-      navigate("/thank-you");
-
-      // setError(
-      //   err instanceof Error ? err.message : "Something went wrong. Try again."
-      // );
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Something went wrong. Please try again.",
+      );
     } finally {
       setSubmitting(false);
     }
